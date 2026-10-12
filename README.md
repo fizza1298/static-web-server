@@ -24,25 +24,6 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
-## What's actually happening
-
-1. `http.server` starts listening for requests on port 8000.
-2. The browser requests `/`, and the server sends back `index.html`.
-3. The browser reads the HTML, sees it needs `styles.css`, and sends a second request.
-4. The server sends the CSS file exactly as it is on disk, and the browser renders the page.
-
-No code runs on the server. It just hands over files. That's what makes it **static**.
-
-## Project structure
-static-web-server/
-├── index.html # the page content
-├── styles.css # how it looks
-└── README.md
-
-## Security note
-
-By default, `http.server` listens on `0.0.0.0`, which means anyone on the same network can browse the folder it's running in. Using `--bind 127.0.0.1` keeps it reachable only from your own machine. It's a learning tool, not a production server.
-
 ## Building it back up
 
 - [x] Serve a static HTML + CSS page
