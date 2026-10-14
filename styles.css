@@ -1,3 +1,14 @@
 * {
 	background: linear-gradient(0deg, rgb(229, 241, 241), rgb(224, 255, 255));
 }
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.center-child-1 {
+	justify-content: space-between;
+	background-color: lightblue;
+	padding: 20px;
+	gap: 20px;
+}
